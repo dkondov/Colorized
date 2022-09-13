@@ -14,24 +14,25 @@ struct ContentView: View {
     @State private var blueValue = Double.random(in: 0...255)
         
     var body: some View {
-        
+    
         VStack {
             ScreenColorView(redValue: redValue,
                             greenValue: greenValue,
                             blueValue: blueValue)
             
             VStack {
-            SliderColorView(value: $redValue, tintColor: .red)
-            SliderColorView(value: $greenValue, tintColor: .green)
-            SliderColorView(value: $blueValue, tintColor: .blue)
+            SliderColorView(value: $redValue, Color: .red)
+            SliderColorView(value: $greenValue, Color: .green)
+            SliderColorView(value: $blueValue, Color: .blue)
             }
-            .padding()
+            .frame(height: 150)
+            
             Spacer()
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(CustomColor.myColor)
-    }
+   }
 }
 
 struct CustomColor {

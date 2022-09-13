@@ -11,6 +11,7 @@ struct SliderTextField: View {
     
     @Binding var textField: String
     @Binding var value: Double
+    
     @State private var showAlert = false
     
     var body: some View {
@@ -18,7 +19,7 @@ struct SliderTextField: View {
         TextField("", text: $textField)
             .textFieldStyle(.roundedBorder)
             .frame(width: 50)
-            .keyboardType(.decimalPad)
+            .multilineTextAlignment(.trailing)
             .alert(isPresented: $showAlert){
                 Alert(title: Text("Wrong format"), message: Text("Please enter values to 0 from 255"))
             }

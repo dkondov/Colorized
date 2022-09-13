@@ -21,6 +21,8 @@ struct ScreenColorView: View {
             .foregroundColor(Color(red: redValue / 255,
                                    green: greenValue / 255,
                                    blue: blueValue / 255))
+            .overlay(RoundedRectangle(cornerRadius: 15, style: .continuous)
+                                .stroke(Color.white, lineWidth: 3))
     }
 }
 
