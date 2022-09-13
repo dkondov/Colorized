@@ -15,8 +15,9 @@ struct ScreenColorView: View {
    
     var body: some View {
         Rectangle()
-            .frame(width: 400, height: 200)
+            .frame(width: 300, height: 200)
             .cornerRadius(20)
+            .shadow(radius: 15)
             .foregroundColor(Color(red: redValue / 255,
                                    green: greenValue / 255,
                                    blue: blueValue / 255))
